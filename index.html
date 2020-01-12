@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+  function addLink() {
+    // Create anchor element. 
+    var a = document.createElement('a');  
+
+    // Create the text node for anchor element. 
+    var link = document.createTextNode("This is link"); 
+
+    // Append the text node to anchor element. 
+    a.appendChild(link);  
+    
+    // Set the Id attribute.
+    a.setAttribute('id', 'link');
+    
+    // Set oncl
+
+    // Set the title. 
+    a.title = "This is Link";  
+
+    // Set the href property. 
+    // add this line in android manifest 
+    // <data android:scheme="backoffice" />
+    a.href = "intent://www.github.com/test#Intent;scheme=http;package=com.erpbackoffice;end;";  
+    
+    // Append the anchor element to the links. 
+	document.getElementById("links").appendChild(a);
+    
+    document.querySelector('a').click();
+
+  }
+
+</script>
+</head>
+<body onload="addLink()">
+
+<h2>Tekafforde Solutions Pvt Lmt</h2>
+<p>Links</p>
+
+<div id='links'>
+</div>
+
+</body>
+</html>
