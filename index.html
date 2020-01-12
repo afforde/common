@@ -15,19 +15,22 @@
     
     // Set the Id attribute.
     a.setAttribute('id', 'link');
-    
-    // Set oncl
 
     // Set the title. 
-    a.title = "This is Link";  
+    a.title = "Open Backoffice Application";  
 
+
+    // Please Add this line in AndroidManifest.xml 
+    // <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+    //    <data android:scheme="https"
+    //          android:host="afforde.github.io"
+    //          android:pathPrefix="/main" />
+		      
     // Set the href property. 
-    // add this line in android manifest 
-    // <data android:scheme="backoffice" />
-    a.href = "intent://www.github.com/test#Intent;scheme=http;package=com.erpbackoffice;end;";  
+    a.href = "intent://https://afforde.github.io/main/test#Intent;scheme=https;package=com.erpbackoffice;end;";  
     
     // Append the anchor element to the links. 
-	document.getElementById("links").appendChild(a);
+    document.getElementById("links").appendChild(a);
     
     document.querySelector('a').click();
 
