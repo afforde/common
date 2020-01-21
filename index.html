@@ -35,7 +35,7 @@ function getUrlParameter(name) {
     //          android:pathPrefix="/main" />
 		      
     // Set the href property. 
-    a.href = "backoffice://main";  
+    a.href = "backoffice://main/"+getUrlParameter('orderId');  
     
     // Append the anchor element to the links. 
     document.getElementById("links").appendChild(a);
@@ -49,7 +49,7 @@ function getUrlParameter(name) {
 <body onload="addLink()">
 
 <h2>Tekafforde Solutions Pvt Lmt</h2>
-<p>Links</p><a href="backoffice://main">click me!</a>
+<p>Links</p>
 
 <div id='links'>
 </div>
